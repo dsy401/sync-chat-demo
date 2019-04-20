@@ -1,0 +1,32 @@
+<!--<div id="mario-chat">-->
+<!--  <div id="chat-window">-->
+<!--    <div id="output"></div>-->
+<!--    <div id="feedback"></div>-->
+<!--  </div>-->
+<!--  <input type="text" placeholder="Handle" [(ngModel)]="handle"/>-->
+<!--  <input type="text" placeholder="Message" [(ngModel)]="message"/>-->
+<!--  <button (click)="SendMessage()">Send</button>-->
+<!--</div>-->
+
+<div id="live-chat">
+  <header class="clearfix">
+    <a class="chat-close">x</a>
+    <h4 id="username">{{username}}</h4>
+    <span class="chat-message-counter" style="display: none">{{remainder}}</span>
+  </header>
+  <div class="chat">
+    <div id="chat-history">
+
+    </div>
+    <p id="chat-feedback"></p>
+    <div id="form">
+      <div class="form-inline" (keyup.enter)="SendMessage()">
+        <fieldset>
+          <input type="text" id="input" placeholder="Type your message…" (ngModelChange)="typing()" [(ngModel)]="message" autofocus/>
+          <input type="submit" value="send" class="btn btn-primary"  (click)="SendMessage()">
+        </fieldset>
+      </div>
+
+    </div>
+  </div>
+</div>
